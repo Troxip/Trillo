@@ -15,6 +15,11 @@
   align-items: center;
   justify-content: center;
 
+  @media only screen and (max-width: $bp-smallest) {
+    flex: 0 0 100%;
+    order: 1;
+  }
+
   &__input {
     font-family: inherit;
     font-size: inherit;
@@ -26,11 +31,17 @@
     width: 90%;
     transition: all 0.2s;
     margin-right: -3.25rem;
+    @media only screen and (max-width: $bp-smallest) {
+      width: 75%;
+    }
 
     &:focus {
       outline: none;
       width: 100%;
       background-color: var(--color-grey-light-3);
+      @media only screen and (max-width: $bp-smallest) {
+        width: 85%;
+      }
     }
     &::-webkit-input-placeholder {
       font-weight: 100;
@@ -119,11 +130,23 @@
   font-size: 1.4rem;
   margin-top: 3.5rem;
   list-style: none;
+
+  @media only screen and (max-width: $bp-medium) {
+    margin-top: 0;
+    display: flex;
+  }
+
   &__item {
     position: relative;
+    @media only screen and (max-width: $bp-medium) {
+      flex: 1;
+    }
 
     &:not(:last-child) {
       margin-bottom: 0.5rem;
+      @media only screen and (max-width: $bp-medium) {
+        margin-bottom: 0;
+      }
     }
 
     &::before {
@@ -159,12 +182,27 @@
     text-transform: uppercase;
     padding: 1.5rem 3rem;
     position: relative;
+
+    @media only screen and (max-width: $bp-medium) {
+      justify-content: center;
+      padding: 2rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      flex-direction: column;
+      padding: 1.5rem 0.5rem;
+    }
   }
   &__icon {
     height: 1.75rem;
     width: 1.75rem;
     margin-right: 2rem;
     fill: currentColor;
+    @media only screen and (max-width: $bp-small) {
+      margin-right: 0;
+      margin-bottom: 0.5rem;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
   }
 }
 
@@ -175,6 +213,22 @@
   color: var(--color-grey-light-4);
   text-align: center;
   padding: 2.5rem;
+  @media only screen and (max-width: $bp-medium) {
+    display: none;
+  }
+}
+
+.legal-bottom {
+  display: none;
+  align-items: center;
+  height: 5rem;
+  font-size: 1.2rem;
+  color: var(--color-grey-light-4);
+  text-align: center;
+  background-color: var(--color-grey-dark-1);
+  @media only screen and (max-width: $bp-medium) {
+    display: grid;
+  }
 }
 
 ///////////////////
@@ -194,18 +248,34 @@
   display: flex;
   align-items: center;
   border-bottom: var(--line);
+  @media only screen and (max-width: $bp-super-small) {
+    flex-wrap: wrap;
+  }
   &__heading {
     font-size: 2.25rem;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 1.5rem 3rem;
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.75rem;
+      padding: 1.25rem 2rem;
+    }
+    @media only screen and (max-width: $bp-super-small) {
+      color: var(--color-primary);
+      padding: 1rem 0 0 0;
+      text-align: center;
+      flex: 0 0 100%;
+    }
   }
 
   &__stars {
     display: flex;
     margin-right: auto;
     animation: pulsate-2 1s infinite;
+    @media only screen and (max-width: $bp-super-small) {
+      margin-left: 4rem;
+    }
   }
 
   &__icon-star,
@@ -234,16 +304,28 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    @media only screen and (max-width: $bp-small) {
+      padding: 0 1.75rem;
+    }
+    @media only screen and (max-width: $bp-super-small) {
+      padding: 0 0.75rem;
+    }
   }
 
   &__rating-average {
     font-size: 2.25rem;
     font-weight: 300;
     margin-bottom: -3px;
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.75rem;
+    }
   }
   &__rating-count {
     font-size: 0.8rem;
     text-transform: uppercase;
+    @media only screen and (max-width: $bp-small) {
+      font-size: 0.5rem;
+    }
   }
 }
 
@@ -323,6 +405,13 @@
     font-weight: 300;
     text-transform: uppercase;
     margin-bottom: 2.5rem;
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.75rem;
+    }
+    @media only screen and (max-width: $bp-super-small) {
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
   }
 }
 ///////////////////
