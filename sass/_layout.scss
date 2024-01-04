@@ -126,20 +126,34 @@
 }
 
 .user-reviews {
-  flex: 1;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   &__box {
-    &:not(:last-child) {
-      margin-bottom: 3.5rem;
-    }
+    position: relative;
+    margin-bottom: 3.5rem;
     box-shadow: var(--shadow-light);
     padding: 3rem;
     background-color: white;
+    overflow: hidden;
+
+    &::before {
+      content: "\201C";
+      position: absolute;
+      top: -8rem;
+      left: -1rem;
+      font-size: 20rem;
+      color: var(--color-grey-light-2);
+      font-family: sans-serif;
+      z-index: 1;
+    }
   }
 
   &__text {
     flex: 0 0 100%;
     margin-bottom: 2rem;
+    z-index: 10;
+    position: relative;
   }
 
   &__photo {
@@ -168,6 +182,7 @@
 
   &__date {
     font-size: 1.1rem;
+    color: var(--color-grey-dark-3);
   }
 
   &__rating {
