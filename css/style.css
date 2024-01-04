@@ -283,6 +283,7 @@ body {
   flex: 1; }
 
 .detail {
+  font-size: 1.4rem;
   display: flex;
   padding: 4.5rem;
   background-color: var(--color-grey-light-2);
@@ -294,10 +295,6 @@ body {
   padding: 3rem;
   flex: 0 0 60%;
   margin-right: 4.5rem; }
-
-.user-reviews {
-  background-color: yellowgreen;
-  flex: 1; }
 
 .descriptions {
   font-size: 1.4rem;
@@ -349,3 +346,38 @@ body {
       border-radius: 50%; }
       .descriptions__recomendations-img:not(:last-child) {
         margin-right: -1.3rem; }
+
+.user-reviews {
+  flex: 1; }
+  .user-reviews__box {
+    box-shadow: var(--shadow-light);
+    padding: 3rem;
+    background-color: white; }
+    .user-reviews__box:not(:last-child) {
+      margin-bottom: 3.5rem; }
+  .user-reviews__text {
+    flex: 0 0 100%;
+    margin-bottom: 2rem; }
+  .user-reviews__photo {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    margin-right: 1.2rem; }
+  .user-reviews__info {
+    display: flex; }
+  .user-reviews__namedate {
+    justify-content: center;
+    display: flex;
+    flex-direction: column; }
+  .user-reviews__name {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 700; }
+  .user-reviews__date {
+    font-size: 1.1rem; }
+  .user-reviews__rating {
+    margin-left: auto;
+    align-self: center;
+    font-size: 2.5rem;
+    color: var(--color-primary); }
