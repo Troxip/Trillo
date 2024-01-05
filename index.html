@@ -13,6 +13,15 @@
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
     <title>Trillo &mdash; Your all-in-one booking app</title>
   </head>
   <body>
@@ -43,8 +52,85 @@
             <svg class="user-nav__icon">
               <use xlink:href="./img/sprite.svg#icon-chat"></use>
             </svg>
-            <span class="user-nav__notification">13</span>
+            <div class="user-nav__notification">13</div>
+
+            <div class="user-messages__box">
+              <h2 class="user-messages__header">
+                <a href="#" class="user-messages__text">Show all messages</a>
+                <ion-icon
+                  class="user-messages__icon"
+                  name="checkmark-done-outline"
+                ></ion-icon>
+                <ion-icon
+                  class="user-messages__icon"
+                  name="star-outline"
+                ></ion-icon>
+              </h2>
+              <figure class="user-messages__chats">
+                <figcaption class="user-messages__friend">
+                  <img
+                    class="user-messages__friend-photo"
+                    src="./img/user-1.jpg"
+                    alt="Friend 1"
+                  />
+                  <div class="user-messages__friend-info-box">
+                    <p class="user-messages__friend-name">Carl</p>
+                    <p class="user-messages__friend-message">
+                      <span class="who">You:</span> Naah, i give up
+                    </p>
+                  </div>
+                  <p class="user-messages__friend-date">
+                    <ion-icon
+                      class="user-messages__friend-checkmark"
+                      name="checkmark-done-outline"
+                    ></ion-icon>
+                    22.12.2023
+                  </p>
+                </figcaption>
+                <figcaption class="user-messages__friend">
+                  <img
+                    class="user-messages__friend-photo"
+                    src="./img/user-2.jpg"
+                    alt="Friend 1"
+                  />
+                  <div class="user-messages__friend-info-box">
+                    <p class="user-messages__friend-name">Samantha</p>
+                    <p class="user-messages__friend-message">
+                      How did you even do that?
+                    </p>
+                  </div>
+                  <p class="user-messages__friend-date">
+                    <ion-icon
+                      class="user-messages__friend-checkmark"
+                      name="checkmark-outline"
+                    ></ion-icon>
+                    22.12.2023
+                  </p>
+                </figcaption>
+                <figcaption class="user-messages__friend">
+                  <img
+                    class="user-messages__friend-photo"
+                    src="./img/user-3.jpg"
+                    alt="Friend 1"
+                  />
+                  <div class="user-messages__friend-info-box">
+                    <p class="user-messages__friend-name">Anders</p>
+                    <p class="user-messages__friend-message">
+                      <span class="who">You:</span> Still learning.
+                    </p>
+                  </div>
+                  <p class="user-messages__friend-date">
+                    <ion-icon
+                      class="user-messages__friend-checkmark"
+                      name="checkmark-done-outline"
+                    ></ion-icon>
+                    22.12.2023
+                  </p>
+                </figcaption>
+              </figure>
+            </div>
           </div>
+
           <div class="user-nav__user">
             <img
               src="./img/user.jpg"
@@ -52,6 +138,38 @@
               class="user-nav__user-photo"
             />
             <span class="user-nav__user-name">Jonas</span>
+            <div class="user-nav__menu">
+              <ul class="user-nav__menu__list">
+                <li class="user-nav__menu__list-item">
+                  <ion-icon
+                    class="user-nav__menu__list-icon"
+                    name="person-circle-outline"
+                  ></ion-icon>
+                  My profile
+                </li>
+                <li class="user-nav__menu__list-item">
+                  <ion-icon
+                    class="user-nav__menu__list-icon"
+                    name="bookmark-outline"
+                  ></ion-icon>
+                  My bookings
+                </li>
+                <li class="user-nav__menu__list-item">
+                  <ion-icon
+                    class="user-nav__menu__list-icon"
+                    name="settings-outline"
+                  ></ion-icon>
+                  Settings
+                </li>
+                <li class="user-nav__menu__list-item">
+                  <ion-icon
+                    class="user-nav__menu__list-icon"
+                    name="log-out-outline"
+                  ></ion-icon>
+                  Log out
+                </li>
+              </ul>
+            </div>
           </div>
         </nav>
       </header>
