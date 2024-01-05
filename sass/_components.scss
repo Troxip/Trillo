@@ -235,8 +235,10 @@
 /// GALLERY
 
 .gallery {
+  overflow: hidden;
   display: flex;
   &__photo {
+    transition: all 0.4s;
     width: 100%;
     display: block;
   }
@@ -617,4 +619,47 @@
   z-index: 99;
   visibility: hidden;
   opacity: 0;
+}
+
+.gallery__item {
+  position: relative;
+  transition: all 0.3s;
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:hover .gallery__photo {
+    filter: brightness(0.5);
+  }
+  &:hover &__caption {
+    top: 65%;
+    visibility: visible;
+    opacity: 1;
+  }
+  &__caption {
+    transition: all 0.4s;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 5%;
+  }
+  &-name {
+    opacity: 0.9;
+    margin-left: 10px;
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    border-radius: 2rem;
+    color: #fff;
+    display: inline-block;
+    background-color: var(--color-primary);
+  }
+  &-country {
+    opacity: 0.9;
+    font-weight: 800;
+    margin-left: 10px;
+    padding: 0 1.5rem;
+    font-size: 1.5rem;
+    color: var(--color-primary);
+  }
 }
